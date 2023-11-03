@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 
-const Carousel = () => {
+const ImageCarousel = (props) => {
   const slides = [
     { url: "https://boec.com/wp-content/uploads/2020/01/Untitled-1.jpg" },
-    { url: "https://i.ytimg.com/vi/sTmUOzH6hY4/maxresdefault.jpg" },
-    { url: "https://boec.com/wp-content/uploads/2020/01/Untitled-1.jpg" },
+    {
+      url: "https://www.nyit.edu/files/events/Event_20201018_VirtualTalentShow_Hero.jpg",
+    },
+    {
+      url: "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/11/website-banner-1-1668605482.jpg",
+    },
     { url: "https://i.ytimg.com/vi/sTmUOzH6hY4/maxresdefault.jpg" },
   ];
 
@@ -53,7 +55,7 @@ const Carousel = () => {
           className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer"
         >
           <svg
-            class="w-4 h-4"
+            className="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -61,9 +63,9 @@ const Carousel = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M5 1 1 5l4 4"
             />
           </svg>
@@ -75,7 +77,7 @@ const Carousel = () => {
           className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black text-white cursor-pointer"
         >
           <svg
-            class="w-4 h-4"
+            className="w-4 h-4"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -83,9 +85,9 @@ const Carousel = () => {
           >
             <path
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="m1 9 4-4-4-4"
             />
           </svg>
@@ -95,7 +97,6 @@ const Carousel = () => {
       <div className="flex top-4 justify-center py-2 items-center gap-2 h-5">
         {slides.map((slide, slideIndex) => (
           <CarouselIndicator
-            key={slideIndex}
             onClick={() => setCurrentIndex(slideIndex)}
             activeIndex={currentIndex}
             index={slideIndex}
@@ -106,7 +107,7 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default ImageCarousel;
 
 function CarouselIndicator(props) {
   let clsName =
@@ -115,7 +116,6 @@ function CarouselIndicator(props) {
       : "cursor-pointer h-2 w-2 rounded-full bg-gray-500";
   return (
     <div
-      key={props.key}
       onClick={props.onClick}
       className={clsName + " -translate-x-3 translate-y-3 transition-all"}
     ></div>

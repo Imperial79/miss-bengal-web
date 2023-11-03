@@ -35,3 +35,16 @@
   background-position: 0px -450px;
 
 }
+
+::-webkit-scrollbar {
+  background-color: whitesmoke;
+  border: 5px solid white;
+  border-radius: 100px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background-color: #0891B2;
+  border: 5px solid white;
+  border-radius: 100px;
+}
