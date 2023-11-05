@@ -29,12 +29,6 @@
 }
 
 
-.bg-image {
-  background-image: url('src/assets/bg.jpg');
-  object-fit: cover;
-  background-position: 0px -450px;
-
-}
 
 ::-webkit-scrollbar {
   background-color: whitesmoke;
@@ -51,11 +45,11 @@
 
 
 .hero-bg-image {
-  background-image: url("src/assets/hero-bg.png");
+  background-image: url(src/assets/hero-bg.png);
   object-fit: cover;
 }
 
 .main-bg-image {
-  background-image: url("src/assets/main-bg.jpg");
+  background-image: url(src/assets/main-bg.jpg);
   object-fit: cover;
 }
