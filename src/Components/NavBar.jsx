@@ -4,15 +4,6 @@ import menu from "../assets/menu.svg";
 import HomeMenu from "./HomeMenu";
 
 function NavBar() {
-  // function handleShowMenu() {
-  //   let menu = document.getElementById("menu");
-  //   if (menu.classList.contains("hidden")) {
-  //     menu.classList.remove("hidden");
-  //   } else {
-  //     menu.classList.add("hidden");
-  //   }
-  // }
-
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -35,7 +26,7 @@ function NavBar() {
 
   return (
     <>
-      <div className="py-[10px] px-[20px] bg-gray-800 h-20 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0">
+      <div className=" py-[10px] px-[20px] bg-gray-800 h-20 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0">
         <ul className="md:flex hidden gap-10 items-center">
           <li>Home</li>
           <li>Blogs</li>

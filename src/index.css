@@ -48,3 +48,14 @@
   border: 5px solid white;
   border-radius: 100px;
 }
+
+
+.hero-bg-image {
+  background-image: url("src/assets/hero-bg.png");
+  object-fit: cover;
+}
+
+.main-bg-image {
+  background-image: url("src/assets/main-bg.jpg");
+  object-fit: cover;
+}

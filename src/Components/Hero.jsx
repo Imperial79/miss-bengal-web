@@ -1,32 +1,41 @@
 import React from "react";
 import NavBar from "./NavBar";
+import heroImg from "../assets/hero.png";
 
 function Hero() {
   return (
-    <div className="bg-gray-800 text-white">
+    <div className="bg-gray-800 text-white hero-bg-image">
       <NavBar />
-      <div className="md:px-[80px] px-[20px] md:py-[70px] py-[20px] mt-20">
-        <div className="mb-10">
-          <h1 className="md:text-6xl text-[40px] font-bold">
+      <div className="md:px-[80px] px-[20px] md:py-[70px] py-[20px] mt-20 md:flex justify-between items-center">
+        <div className="">
+          <h1 className="md:text-6xl text-[40px] font-bold text-clip">
             You're the Talent
           </h1>
           <h1 className="md:text-4xl text-[18px] mt-2">we're looking for !</h1>
         </div>
 
-        <div className="grid md:grid-cols-3 md:gap-10 gap-5">
-          <HeroCards
-            title="Best talents in one place"
-            subtitle="we're looking forwe're looking forwe're looking forwe're looking forwe're looking for"
-          />
-          <HeroCards
-            title="Best talents in one place"
-            subtitle="we're looking forwe're looking forwe're looking forwe're looking forwe're looking for"
-          />
-          <HeroCards
-            title="Best talents in one place"
-            subtitle="we're looking forwe're looking forwe're looking forwe're looking forwe're looking for"
+        <div>
+          <img
+            src={heroImg}
+            alt=""
+            className="md:h-[300px] h-[200px] mx-auto mt-5 md:mt-0"
           />
         </div>
+
+        {/* <div className="grid md:grid-cols-3 md:gap-10 gap-5">
+          <HeroCards
+            title="Best talents in one place"
+            subtitle="we're looking forwe're looking forwe're looking forwe're looking forwe're looking for"
+          />
+          <HeroCards
+            title="Best talents in one place"
+            subtitle="we're looking forwe're looking forwe're looking forwe're looking forwe're looking for"
+          />
+          <HeroCards
+            title="Best talents in one place"
+            subtitle="we're looking forwe're looking forwe're looking forwe're looking forwe're looking for"
+          />
+        </div> */}
       </div>
     </div>
   );
