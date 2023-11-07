@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/react.svg";
 import menu from "../assets/menu.svg";
 import HomeMenu from "./HomeMenu";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -41,12 +42,13 @@ function NavBar() {
         </div>
 
         <div className="flex items-center">
-          <button
+          <Link
+            to="/signup"
             type="button"
             className="text-black bg-[#00D8FF] hover:bg-cyan-300 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg transition-all hover:shadow-none shadow-2xl shadow-[#00D8FF] text-sm px-5 py-2.5 text-center light:bg-blue-600 light:hover:bg-blue-700 light:focus:ring-blue-800"
           >
             For Actors
-          </button>
+          </Link>
 
           <button
             onClick={toggleMenu}
