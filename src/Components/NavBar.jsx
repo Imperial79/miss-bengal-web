@@ -3,6 +3,7 @@ import logo from "../assets/react.svg";
 import menu from "../assets/menu.svg";
 import HomeMenu from "./HomeMenu";
 import { Link } from "react-router-dom";
+import logo2 from "../assets/miss-bengal-logo-web-01.png";
 
 function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -27,18 +28,18 @@ function NavBar() {
 
   return (
     <>
-      <div className=" py-[10px] px-[20px] bg-gray-800 h-20 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0">
+      <div className="md:py-0 py-[10px] px-[20px] bg-gray-800 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0">
         <ul className="md:flex hidden gap-10 items-center">
           <li>Home</li>
           <li>Blogs</li>
           <li>About Us</li>
         </ul>
         <div className="flex items-center">
-          <img src={logo} alt="" className="md:h-10 h-7 mr-3" />
-          <div>
+          <img src={logo2} alt="" className="md:h-20 h-14 mr-3" />
+          {/* <div>
             <h1 className=" font-medium">Miss</h1>
             <h1 className=" font-medium text-lg">Bengal</h1>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex items-center">
@@ -47,7 +48,7 @@ function NavBar() {
             type="button"
             className="text-black bg-[#00D8FF] hover:bg-cyan-300 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg transition-all hover:shadow-none shadow-2xl shadow-[#00D8FF] text-sm px-5 py-2.5 text-center light:bg-blue-600 light:hover:bg-blue-700 light:focus:ring-blue-800"
           >
-            For Actors
+            Participate
           </Link>
 
           <button

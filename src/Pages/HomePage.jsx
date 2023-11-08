@@ -26,7 +26,9 @@ function HomePage() {
           Checkout the upcoming auditions so that you do not miss them
         </h1>
 
-        <div className="grid md:grid-cols-2 mt-5 gap-10">
+        <HeroPost />
+
+        {/* <div className="grid md:grid-cols-2 mt-5 gap-10">
           <HeroPost />
           <div className="md:mt-0 mt-5">
             <div className="flex justify-between mb-5">
@@ -40,7 +42,7 @@ function HomePage() {
             <OtherPostsTile />
             <OtherPostsTile />
           </div>
-        </div>
+        </div> */}
       </ContentArea>
     </>
   );
@@ -51,37 +53,36 @@ export default HomePage;
 function HeroPost() {
   return (
     <div>
-      <div className="h-[300px] bg-gray-200 rounded-lg">
+      <div className="md:flex items-start p-5 bg-gray-200 rounded-lg gap-4 mt-5">
         <img
           src="https://www.nyit.edu/files/events/Event_20201018_VirtualTalentShow_Hero.jpg"
           alt=""
-          className="h-full w-full rounded-lg object-cover"
+          className="h-full md:w-1/5 w-full rounded-lg object-contain"
         />
-      </div>
-      <h1 className="mt-2 font-semibold text-black text-lg">Post title</h1>
-      <h1 className="font-medium text-gray-400 text-sm">
-        Posted{" "}
-        <span
-          className="font-semibold
- text-cyan-600"
-        >
-          2 days ago
-        </span>
-      </h1>
-      <div className="flex items-center justify-between">
-        <h1 className="font-medium mt-4 text-sm">200+ Applications</h1>
-        <h1 className="font-medium mt-4 text-sm">500 Openings</h1>
-      </div>
-      <h1 className="mt-2 font-normal text-black text-md">
-        Post description Post description Post description Post Post description
-        Post description Post description Post description Post description Post
-        description Post description description Post description Post
-        description
-      </h1>
 
-      <button className="mt-2 bg-cyan-600 text-white font-medium px-4 py-2 rounded-full shadow-cyan-400 shadow-2xl hover:shadow-none transition-all duration-200 hover:bg-cyan-300 hover:text-black">
-        Apply Now
-      </button>
+        <div>
+          <h1 className="font-semibold text-black text-lg">Post title</h1>
+          <h1 className="font-medium text-gray-400 text-sm">
+            Posted{" "}
+            <span className="font-semibold text-cyan-600">2 days ago</span>
+          </h1>
+          {/* <div className="flex items-center gap-2"> */}
+          <h1 className="font-medium mt-4 text-sm">200+ Applications</h1>
+          <h1 className="font-medium  text-sm">500 Openings</h1>
+          {/* </div> */}
+          <h1 className="mt-2 font-normal text-black text-md">
+            Post description Post description Post description Post Post
+            description Post description Post description Post description Post
+            description Post description Post description description Post
+            description Post description
+          </h1>
+          <div className="flex justify-end">
+            <button className="mt-2 bg-cyan-600 text-white font-medium px-4 py-2 rounded-full shadow-cyan-400 shadow-2xl hover:shadow-none transition-all duration-200 hover:bg-cyan-300 hover:text-black">
+              Apply Now
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

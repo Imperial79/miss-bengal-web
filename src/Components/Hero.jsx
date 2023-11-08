@@ -11,11 +11,11 @@ function Hero() {
     >
       <NavBar />
       <div className="md:px-[80px] px-[20px] md:py-[70px] py-[20px] mt-20 md:flex justify-between items-center">
-        <div className="">
+        <div>
           <h1 className="md:text-6xl text-[40px] font-bold text-clip">
-            You're the Talent
+            Smart • Talent • Beauty
           </h1>
-          <h1 className="md:text-4xl text-[18px] mt-2">we're looking for !</h1>
+          {/* <h1 className="md:text-4xl text-[18px] mt-2">we're looking for !</h1> */}
         </div>
 
         <div>
