@@ -5,6 +5,7 @@ import Signup1 from "./Pages/Signup1";
 import Terms from "./Pages/Terms";
 import Declaration from "./Pages/Declaration";
 import UploadDocs from "./Pages/UploadDocs";
+import Verification from "./Pages/Verification";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/declaration" element={<Declaration />} />
           <Route path="/upload-docs" element={<UploadDocs />} />
+          <Route path="/verification" element={<Verification />} />
         </Routes>
         <Footer />
       </BrowserRouter>

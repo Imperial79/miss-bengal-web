@@ -1,10 +1,14 @@
 import React from "react";
 import NavBar from "./NavBar";
 import heroImg from "../assets/hero.png";
+import heroBg from "../assets/hero-bg.png";
 
 function Hero() {
   return (
-    <div className="bg-gray-800 text-white hero-bg-image">
+    <div
+      className="bg-gray-800 text-white"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
       <NavBar />
       <div className="md:px-[80px] px-[20px] md:py-[70px] py-[20px] mt-20 md:flex justify-between items-center">
         <div className="">

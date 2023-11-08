@@ -49,12 +49,14 @@
 }
 
 
-.hero-bg-image {
-  background-image: url(src/assets/hero-bg.png);
+/* .hero-bg-image {
+  background-image: url(
+  require('src/assets/hero-bg.png')  
+ );
   object-fit: cover;
-}
+} */
 
-.main-bg-image {
+/* .main-bg-image {
   background-image: url(src/assets/main-bg.jpg);
   object-fit: cover;
-}
+} */
