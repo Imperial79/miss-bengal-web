@@ -9,7 +9,7 @@ function Verification() {
         <h1 className="font-semibold mb-5">Step 5/5</h1>
         <h1 className="font-semibold mb-5">Verify your phone</h1>
         <div className="flex items-center mb-6 gap-2">
-          <div className="w-[200px]">
+          <div className="md:w-[200px] w-full">
             <label
               htmlFor="phone"
               className="block mb-2 text-sm font-medium text-gray-900"
@@ -27,7 +27,7 @@ function Verification() {
               Edit?
             </button>
           </div>
-          <button className="rounded-md bg-cyan-700 text-white px-2.5 py-1.5 text-sm font-medium hover:bg-cyan-600">
+          <button className="rounded-md min-w-max bg-cyan-700 text-white px-2.5 py-1.5 text-sm font-medium hover:bg-cyan-600">
             Send OTP
           </button>
         </div>
@@ -42,7 +42,7 @@ function Verification() {
           <input
             type="phone"
             id="phone"
-            className="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-cyan-500 focus:border-cyan-500 block w-[200px] p-2.5"
+            className="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-cyan-500 focus:border-cyan-500 block md:w-[200px] w-full p-2.5"
             placeholder=""
             required
           />
@@ -73,7 +73,7 @@ function Verification() {
           </Link>
 
           <Link
-            to=""
+            to="/confirmation"
             type="button"
             className="text-white bg-cyan-700 hover:bg-cyan-300 hover:text-black focus:outline-none focus:ring-4 focus:ring-cyan-300 font-medium rounded-lg transition-all text-sm px-5 py-2.5 text-center light:bg-blue-600 light:hover:bg-blue-700 light:focus:ring-blue-800"
           >
