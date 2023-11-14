@@ -1,15 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function HomeMenu() {
   return (
-    <div className="z-20 fixed w-full ">
+    <div className="z-20 fixed w-full">
       <div
         id="home-menu"
-        className="grid grid-cols-3 gap-4 shadow-2xl md:hidden p-5 bg-gray-800 rounded-b-xl"
+        className="grid grid-cols-2 gap-4 shadow-2xl md:hidden p-5 bg-gray-800 rounded-b-xl"
       >
-        <MenuButton label="Home" />
-        <MenuButton label="Blogs" />
-        <MenuButton label="About Us" />
+        <MenuButton to="/" label="Home" />
+        <MenuButton to="/about-us" label="About Us" />
       </div>
     </div>
   );
@@ -17,10 +17,13 @@ function HomeMenu() {
 
 export default HomeMenu;
 
-function MenuButton(props) {
+function MenuButton({ to, label }) {
   return (
-    <div className="text-center w-full bg-black rounded-lg px-5 py-3 mb-2 hover:bg-gray-700 transition-all">
-      {props.label}
-    </div>
+    <Link
+      to={to}
+      className="text-white text-center w-full bg-black rounded-lg px-5 py-3 mb-2 hover:bg-gray-700 transition-all"
+    >
+      {label}
+    </Link>
   );
 }
