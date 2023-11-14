@@ -7,6 +7,7 @@ import Declaration from "./Pages/Declaration";
 import UploadDocs from "./Pages/UploadDocs";
 import Verification from "./Pages/Verification";
 import Confirmation from "./Pages/Confirmation";
+import AboutUs from "./Pages/AboutUs";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/upload-docs" element={<UploadDocs />} />
           <Route path="/verification" element={<Verification />} />
           <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>

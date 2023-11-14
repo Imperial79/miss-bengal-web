@@ -3,7 +3,7 @@ import logo from "../assets/react.svg";
 import menu from "../assets/menu.svg";
 import HomeMenu from "./HomeMenu";
 import { Link } from "react-router-dom";
-import logo2 from "../assets/miss-bengal-logo-web-01.png";
+import logo2 from "../assets/logo2.png";
 
 function NavBar() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -28,18 +28,21 @@ function NavBar() {
 
   return (
     <>
-      <div className="md:py-0 py-[10px] px-[20px] bg-gray-800 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0">
+      <div className="md:py-0 py-[10px] px-[20px] bg-gray-800 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0 h-20">
         <ul className="md:flex hidden gap-10 items-center">
-          <li>Home</li>
-          <li>Blogs</li>
-          <li>About Us</li>
+          <li>
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about-us" className="hover:underline">
+              About Us
+            </Link>
+          </li>
         </ul>
         <div className="flex items-center">
-          <img src={logo2} alt="" className="md:h-20 h-14 mr-3" />
-          {/* <div>
-            <h1 className=" font-medium">Miss</h1>
-            <h1 className=" font-medium text-lg">Bengal</h1>
-          </div> */}
+          <img src={logo2} alt="" className="md:h-16 h-14 mr-3" />
         </div>
 
         <div className="flex items-center">

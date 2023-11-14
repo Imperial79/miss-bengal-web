@@ -13,24 +13,9 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className=" hover:underline">
-                    About
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Careers
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Brand Center
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Blog
-                  </a>
+                  <Link to="/about-us" className=" hover:underline">
+                    About Us
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -40,24 +25,44 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Discord Server
-                  </a>
+                  <Link
+                    to="mailto:support@missbengal.in"
+                    className="hover:underline"
+                  >
+                    Talent Appearance
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Twitter
-                  </a>
+                  <Link
+                    to="mailto:support@missbengal.in"
+                    className="hover:underline"
+                  >
+                    Titleholder and Brand Partnerships
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Facebook
-                  </a>
+                  <Link
+                    to="mailto:support@missbengal.in"
+                    className="hover:underline"
+                  >
+                    Public Relations
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Contact Us
-                  </a>
+                  <Link
+                    to="mailto:support@missbengal.in"
+                    className="hover:underline"
+                  >
+                    Comments or questions
+                  </Link>
+                </li>
+                <li className="mb-4">
+                  <Link
+                    to="mailto:support@missbengal.in"
+                    className="hover:underline"
+                  >
+                    Travel Information
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -67,19 +72,20 @@ function Footer() {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link
+                    to="https://missbengal.in/privacy-policy"
+                    className="hover:underline"
+                  >
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Licensing
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link
+                    to="https://missbengal.in/terms-conditions"
+                    className="hover:underline"
+                  >
                     Terms &amp; Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -91,8 +97,8 @@ function Footer() {
             Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-5 sm:justify-center md:mt-0">
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -109,9 +115,9 @@ function Footer() {
                 />
               </svg>
               <span className="sr-only">Facebook page</span>
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="#"
               className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -128,10 +134,10 @@ function Footer() {
                 />
               </svg>
               <span className="sr-only">Twitter page</span>
-            </a>
+            </Link>
 
-            <a
-              href="#"
+            <Link
+              to="#"
               className="text-gray-400 hover:text-gray-900 dark:hover:text-white"
             >
               <svg
@@ -148,7 +154,7 @@ function Footer() {
                 />
               </svg>
               <span className="sr-only">Dribbble account</span>
-            </a>
+            </Link>
           </div>
         </div>
       </footer>
