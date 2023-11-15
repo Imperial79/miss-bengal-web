@@ -50,12 +50,12 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="/" className="hover:underline">
+            <Link to="" className="hover:underline">
               Peageants
             </Link>
           </li>
           <li>
-            <Link to="/" className="hover:underline">
+            <Link to="" className="hover:underline">
               Contact Us
             </Link>
           </li>
@@ -79,7 +79,7 @@ function NavBar() {
         </div>
       </div>
 
-      {isMenuOpen && <HomeMenu />}
+      <HomeMenu isOpen={isMenuOpen} />
     </>
   );
 }
