@@ -5,7 +5,6 @@ import NavBar from "../Components/NavBar";
 function AboutUs() {
   return (
     <>
-      {" "}
       <NavBar />
       <div className="w-full md:h-[400px] h-[200px] mt-20">
         <img

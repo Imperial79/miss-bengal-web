@@ -29,29 +29,45 @@ function NavBar() {
   return (
     <>
       <div className="md:py-0 py-[10px] px-[20px] bg-gray-800 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0 h-20">
+        <div className="flex items-center">
+          <img src={logo2} alt="" className="md:h-16 h-14 mr-3" />
+        </div>
         <ul className="md:flex hidden gap-10 items-center">
           <li>
             <Link to="/" className="hover:underline">
               Home
             </Link>
           </li>
+
           <li>
             <Link to="/about-us" className="hover:underline">
               About Us
             </Link>
           </li>
+          <li>
+            <Link to="/events" className="hover:underline">
+              Events
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className="hover:underline">
+              Peageants
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className="hover:underline">
+              Contact Us
+            </Link>
+          </li>
         </ul>
-        <div className="flex items-center">
-          <img src={logo2} alt="" className="md:h-16 h-14 mr-3" />
-        </div>
 
         <div className="flex items-center">
           <Link
             to="/signup"
             type="button"
-            className="text-black bg-[#00D8FF] hover:bg-cyan-300 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg transition-all hover:shadow-none shadow-2xl shadow-[#00D8FF] text-sm px-5 py-2.5 text-center light:bg-blue-600 light:hover:bg-blue-700 light:focus:ring-blue-800"
+            className="text-black bg-[#00D8FF] hover:bg-cyan-300 focus:outline-none focus:ring-4 focus:ring-blue-300 rounded-lg transition-all hover:shadow-none shadow-2xl shadow-[#00D8FF] text-sm px-5 py-2.5 text-center font-semibold"
           >
-            Participate
+            Join
           </Link>
 
           <button

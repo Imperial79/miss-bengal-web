@@ -78,7 +78,7 @@ function HeroPost() {
           </h1>
           <div className="flex justify-end">
             <button className="mt-2 bg-cyan-600 text-white font-medium px-4 py-2 rounded-full shadow-cyan-400 shadow-2xl hover:shadow-none transition-all duration-200 hover:bg-cyan-300 hover:text-black">
-              Apply Now
+              Participate
             </button>
           </div>
         </div>

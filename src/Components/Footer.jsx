@@ -6,7 +6,7 @@ function Footer() {
     <div>
       <footer className="bg-white dark:bg-gray-800">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+          {/* <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
                 Company
@@ -89,13 +89,24 @@ function Footer() {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className="px-4 py-6 bg-gray-100 dark:bg-gray-700 md:flex md:items-center md:justify-between">
           <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
             © 2023 <Link to="https://missbengal.in/">Miss Bengal</Link>. All
             Rights Reserved.
           </span>
+
+          <div className="text-gray-200 text-sm md:mt-0 mt-3">
+            <span className="hover:text-white cursor-pointer">
+              Terms & Conditions
+            </span>
+            <span className="hover:text-white cursor-pointer">
+              {" "}
+              • Privacy Policy
+            </span>
+          </div>
+
           <div className="flex mt-4 space-x-5 sm:justify-center md:mt-0">
             <Link
               to="#"
