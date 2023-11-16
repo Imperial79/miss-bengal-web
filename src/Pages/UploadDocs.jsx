@@ -16,22 +16,22 @@ function UploadDocs() {
 
   return (
     <ContentArea>
-      <div className="bg-gray-100 p-5 rounded-lg md:w-[90%] mx-auto shadow-xl">
+      <div className="bg-gray-800/80 backdrop-blur-md border border-cyan-500 p-5 rounded-lg md:w-[90%] mx-auto shadow-xl text-white">
         <h1 className="font-semibold mb-5">Step 4/5</h1>
         <h1 className="font-semibold">Upload Documents</h1>
-        <h1 className="text-red-600 font-semibold mb-5 text-sm">
-          <span className="text-red-600">*</span>Documents are required
+        <h1 className="text-red-300 font-medium mb-5 text-sm">
+          <span className="text-red-300">*</span>Documents are required
         </h1>
 
         <div className="mb-6">
           <label
             htmlFor="name"
-            className="block mb-2 text-sm font-medium text-gray-900"
+            className="block mb-2 text-sm font-medium text-gray-100"
           >
-            Choose recent selfie <span className="text-red-600">*</span>
+            Choose recent selfie <span className="text-red-300">*</span>
           </label>
           <input
-            className="block w-full text-sm text-gray-900 border border-gray-300 cursor-pointer bg-white light:text-gray-400 focus:outline-none light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400"
+            className="block w-full text-sm text-gray-200 border border-gray-500 cursor-pointer bg-gray-700 light:text-gray-400 focus:outline-none light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400"
             id="file_input"
             type="file"
           />
@@ -42,10 +42,10 @@ function UploadDocs() {
               id="dropdownDefaultButton"
               onClick={toggleDropdown}
               data-dropdown-toggle="dropdown"
-              className="w-full text-black bg-white hover:bg-cyan-100 focus:ring-1 focus:outline-none focus:ring-cyan-300 font-medium border border-gray-300 text-sm px-5 py-2.5 text-center h-10 inline-flex items-center justify-between md:mb-0 mb-5"
+              className="w-full text-gray-100 bg-gray-700 hover:bg-gray-600 focus:ring-1 focus:outline-none font-medium border border-gray-500 text-sm px-5 py-2.5 text-center h-10 inline-flex items-center justify-between md:mb-0 mb-5"
               type="button"
             >
-              <h1 id="dropdownText">Dropdown button</h1>
+              <h1 id="dropdownText">Choose Document</h1>
               <svg
                 className="w-2.5 h-2.5 ml-2.5"
                 aria-hidden="true"
@@ -67,10 +67,10 @@ function UploadDocs() {
               id="dropdown"
               className={`z-10 w-full ${
                 showDropdown ? "absolute" : "hidden"
-              } bg-white divide-y divide-gray-100 rounded-lg shadow`}
+              } bg-gray-700 divide-y divide-gray-100 rounded-lg shadow`}
             >
               <ul
-                className="py-2 text-sm text-gray-700 "
+                className="py-2 text-sm text-gray-100 "
                 aria-labelledby="dropdownDefaultButton"
               >
                 <DropdownBtn
@@ -99,12 +99,12 @@ function UploadDocs() {
             <div className="">
               <label
                 htmlFor="name"
-                className="block mb-2 text-sm font-medium text-gray-900"
+                className="block mb-2 text-sm font-medium text-gray-100"
               >
-                Choose Document <span className="text-red-600">*</span>
+                Choose Document <span className="text-red-300">*</span>
               </label>
               <input
-                className="block w-full text-sm text-gray-900 border border-gray-300 cursor-pointer bg-white light:text-gray-400 focus:outline-none light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400"
+                className="block w-full text-sm text-gray-200 border border-gray-500 cursor-pointer bg-gray-700 light:text-gray-400 focus:outline-none light:bg-gray-700 light:border-gray-600 light:placeholder-gray-400"
                 id="file_input"
                 type="file"
               />
@@ -170,7 +170,7 @@ function DropdownBtn({ onClick, label }) {
     <li>
       <button
         onClick={onClick}
-        className="text-start w-full px-4 py-2 hover:bg-gray-100"
+        className="text-start w-full px-4 py-2 hover:bg-gray-600"
       >
         {label}
       </button>

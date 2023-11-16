@@ -35,9 +35,9 @@
 
 
 
-::-webkit-scrollbar {
-  background-color: whitesmoke;
+/* ::-webkit-scrollbar {
   border: 5px solid white;
+
   border-radius: 100px;
 }
 
@@ -46,17 +46,4 @@
   background-color: #0891B2;
   border: 5px solid white;
   border-radius: 100px;
-}
-
-
-/* .hero-bg-image {
-  background-image: url(
-  require('src/assets/hero-bg.png')  
- );
-  object-fit: cover;
-} */
-
-/* .main-bg-image {
-  background-image: url(src/assets/main-bg.jpg);
-  object-fit: cover;
 } */

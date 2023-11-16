@@ -30,7 +30,13 @@ function NavBar() {
     <>
       <div className="md:py-0 py-[10px] px-[20px] bg-gray-800 text-white flex flex-wrap justify-between items-center fixed w-full z-20 top-0 left-0 h-20">
         <div className="flex items-center">
-          <img src={logo2} alt="" className="md:h-16 h-14 mr-3" />
+          <Link to="/">
+            <img
+              src={logo2}
+              alt=""
+              className="md:h-16 h-14 mr-3 cursor-pointer"
+            />
+          </Link>
         </div>
         <ul className="md:flex hidden gap-10 items-center">
           <li>
@@ -50,8 +56,8 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="" className="hover:underline">
-              Peageants
+            <Link to="/pageants" className="hover:underline">
+              Pageants
             </Link>
           </li>
           <li>

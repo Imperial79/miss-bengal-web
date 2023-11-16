@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 function Terms() {
   return (
     <ContentArea>
-      <div className="bg-gray-100 p-5 rounded-lg md:w-[90%] mx-auto shadow-xl">
+      <div className="bg-gray-800/80 backdrop-blur-md border border-cyan-500 p-5 rounded-lg md:w-[90%] mx-auto shadow-xl text-white">
         <h1 className="font-semibold mb-5">Step 2/5</h1>
         <h1 className="font-semibold mb-5">Terms & Conditions</h1>
 
-        <div className="h-80 overflow-y-auto my-5">
+        <div className="h-80 overflow-y-auto my-5 text-gray-200">
           **Terms and Conditions** ** 1. Acceptance of Terms** By accessing or
           using [Your Company Name] (referred to as "the Company") services, you
           agree to comply with and be bound by these terms and conditions. If
@@ -68,7 +68,7 @@ function Terms() {
           </div>
           <label
             htmlFor="agree"
-            className="ml-2 text-sm font-medium text-gray-900"
+            className="ml-2 text-sm font-medium text-gray-100"
           >
             I agree to the terms and conditions.
           </label>

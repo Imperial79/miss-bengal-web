@@ -3,6 +3,7 @@ import ContentArea from "../Components/ContentArea";
 import Hero from "../Components/Hero";
 import ImageCarousel from "../Components/ImageCarousel";
 import { Link } from "react-router-dom";
+import NavBar from "../Components/NavBar";
 
 function HomePage() {
   return (
@@ -10,19 +11,19 @@ function HomePage() {
       <Hero />
 
       <ContentArea>
-        <h1 className="text-[30px] font-bold text-gray-700 mb-2">
+        <h1 className="text-[30px] font-bold text-white mb-2">
           Recent Castings
         </h1>
-        <h1 className="text-[15px] text-gray-700">
+        <h1 className="text-[15px] text-white">
           Checkout recent shows and the hall of fame
         </h1>
 
         <ImageCarousel />
 
-        <h1 className="text-[30px] font-bold text-gray-700 mb-2 mt-4">
+        <h1 className="text-[30px] font-bold text-white mb-2 mt-4">
           Upcoming auditions
         </h1>
-        <h1 className="text-[15px] text-gray-700">
+        <h1 className="text-[15px] text-white">
           Checkout the upcoming auditions so that you do not miss them
         </h1>
 
@@ -52,8 +53,8 @@ export default HomePage;
 
 function HeroPost() {
   return (
-    <div>
-      <div className="md:flex items-start p-5 bg-gray-200 rounded-lg gap-4 mt-5">
+    <>
+      <div className="md:flex text-white items-start p-5 bg-gray-200 bg-opacity-20 backdrop-blur-sm rounded-lg gap-4 mt-5">
         <img
           src="https://www.nyit.edu/files/events/Event_20201018_VirtualTalentShow_Hero.jpg"
           alt=""
@@ -61,29 +62,28 @@ function HeroPost() {
         />
 
         <div>
-          <h1 className="font-semibold text-black text-lg">Post title</h1>
-          <h1 className="font-medium text-gray-400 text-sm">
-            Posted{" "}
-            <span className="font-semibold text-cyan-600">2 days ago</span>
+          <h1 className="font-semibold text-white text-lg">Post title</h1>
+          <h1 className="font-medium text-gray-100 text-sm">
+            Posted <span className="font-medium text-cyan-300">2 days ago</span>
           </h1>
           {/* <div className="flex items-center gap-2"> */}
           <h1 className="font-medium mt-4 text-sm">200+ Applications</h1>
           <h1 className="font-medium  text-sm">500 Openings</h1>
           {/* </div> */}
-          <h1 className="mt-2 font-normal text-black text-md">
+          <h1 className="mt-2 font-normal text-gray-200 text-md">
             Post description Post description Post description Post Post
             description Post description Post description Post description Post
             description Post description Post description description Post
             description Post description
           </h1>
           <div className="flex justify-end">
-            <button className="mt-2 bg-cyan-600 text-white font-medium px-4 py-2 rounded-full shadow-cyan-400 shadow-2xl hover:shadow-none transition-all duration-200 hover:bg-cyan-300 hover:text-black">
+            <button className="mt-2 bg-cyan-200 text-black font-semibold px-4 py-2 rounded-full shadow-cyan-400 shadow-2xl hover:shadow-none transition-all duration-200 hover:bg-cyan-300 hover:text-black">
               Participate
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

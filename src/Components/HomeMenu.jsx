@@ -15,7 +15,7 @@ function HomeMenu({ isOpen }) {
         <MenuButton to="/" label="Home" />
         <MenuButton to="/about-us" label="About Us" />
         <MenuButton to="/events" label="Events" />
-        <MenuButton to="/peageabts" label="Peageants" />
+        <MenuButton to="/peageabts" label="Pageants" />
         <MenuButton to="/contact-us" label="Contact Us" />
       </div>
     </div>

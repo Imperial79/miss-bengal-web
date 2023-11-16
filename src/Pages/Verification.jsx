@@ -5,25 +5,25 @@ import { Link } from "react-router-dom";
 function Verification() {
   return (
     <ContentArea>
-      <div className="bg-gray-100 p-5 rounded-lg md:w-[90%] mx-auto shadow-xl">
+      <div className="bg-gray-800/80 backdrop-blur-md border border-cyan-500 p-5 rounded-lg md:w-[90%] mx-auto shadow-xl text-white">
         <h1 className="font-semibold mb-5">Step 5/5</h1>
         <h1 className="font-semibold mb-5">Verify your phone</h1>
         <div className="flex items-center mb-6 gap-2">
           <div className="md:w-[200px] w-full">
             <label
               htmlFor="phone"
-              className="block mb-2 text-sm font-medium text-gray-900"
+              className="block mb-2 text-sm font-medium text-gray-100"
             >
               Phone
             </label>
             <input
               type="phone"
               id="phone"
-              className="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
+              className="bg-gray-700 border border-gray-500 text-gray-100 text-sm block w-full p-2.5"
               placeholder="Eg. 909XXX1234"
               required
             />
-            <button className="text-cyan-600 font-semibold text-sm mt-1 hover:underline">
+            <button className="text-cyan-500 hover:text-cyan-400 font-semibold text-sm mt-1 hover:underline">
               Edit?
             </button>
           </div>
@@ -35,14 +35,14 @@ function Verification() {
         <div className="mb-6">
           <label
             htmlFor="phone"
-            className="block mb-2 text-sm font-medium text-gray-900"
+            className="block mb-2 text-sm font-medium text-gray-100"
           >
             Enter OTP
           </label>
           <input
             type="phone"
             id="phone"
-            className="bg-white border border-gray-300 text-gray-900 text-sm focus:ring-cyan-500 focus:border-cyan-500 block md:w-[200px] w-full p-2.5"
+            className="bg-gray-700 border border-gray-500 text-gray-100 text-sm focus:ring-cyan-500 focus:border-cyan-500 block md:w-[200px] w-full p-2.5"
             placeholder=""
             required
           />

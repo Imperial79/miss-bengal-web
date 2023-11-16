@@ -9,6 +9,7 @@ import Verification from "./Pages/Verification";
 import Confirmation from "./Pages/Confirmation";
 import AboutUs from "./Pages/AboutUs";
 import EventsPage from "./Pages/EventsPage";
+import Pageants from "./Pages/pageants";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/confirmation" element={<Confirmation />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/pageants" element={<Pageants />} />
         </Routes>
         <Footer />
       </BrowserRouter>

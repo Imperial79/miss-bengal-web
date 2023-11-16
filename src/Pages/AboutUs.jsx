@@ -14,11 +14,11 @@ function AboutUs() {
         />
       </div>
       <ContentArea>
-        <div className="md:w-[60%] w-full mx-auto text-center">
-          <h1 className="tracking-widest font-bold md:text-5xl text-2xl text-cyan-800">
+        <div className="md:w-[60%] w-full mx-auto text-center text-[#3dc0c3]">
+          <h1 className="tracking-widest font-bold md:text-5xl text-2xl ">
             WHO WE ARE
           </h1>
-          <p className="mt-4 text-lg font-medium">
+          <p className="mt-4 text-lg font-medium text-gray-50">
             Lorem Ipsum, sometimes referred to as 'lipsum', is the placeholder
             text used in design when creating content. It helps designers plan
             out where the content will sit, without needing to wait for the
@@ -26,10 +26,10 @@ function AboutUs() {
             text, but to today's reader, it's seen as gibberish.
           </p>
 
-          <h1 className="mt-20 tracking-widest font-bold md:text-5xl text-2xl text-cyan-800">
+          <h1 className="mt-20 tracking-widest font-bold md:text-5xl text-2xl ">
             WHAT DRIVES US
           </h1>
-          <p className="mt-4 text-lg font-medium">
+          <p className="mt-4 text-lg font-medium text-gray-50">
             Lorem Ipsum, sometimes referred to as 'lipsum', is the placeholder
             text used in design when creating content. It helps designers plan
             out where the content will sit, without needing to wait for the
@@ -61,10 +61,10 @@ function AboutUs() {
             </div>
           </div>
 
-          <h1 className="mt-20 tracking-widest font-bold md:text-5xl text-2xl text-cyan-800">
+          <h1 className="mt-20 tracking-widest font-bold md:text-5xl text-2xl">
             OUR INITIATIVES
           </h1>
-          <p className="mt-4 text-lg font-medium">
+          <p className="mt-4 text-lg font-medium text-gray-50">
             Lorem Ipsum, sometimes referred to as 'lipsum', is the placeholder
             text used in design when creating content. It helps designers plan
             out where the content will sit, without needing to wait for the
