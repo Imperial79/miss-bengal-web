@@ -58,7 +58,7 @@ function ContactUs() {
                     type="text"
                     id="name"
                     className="bg-gray-700 border border-gray-500 text-white/80 text-sm focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
-                    placeholder="Vivek Verma"
+                    placeholder="Example Title"
                     required
                   />
                 </div>
@@ -73,7 +73,7 @@ function ContactUs() {
                     type="email"
                     id="email"
                     className="bg-gray-700 border border-gray-500 text-white/80 text-sm focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5"
-                    placeholder="Vivek Verma"
+                    placeholder="example@go.com"
                     required
                   />
                 </div>

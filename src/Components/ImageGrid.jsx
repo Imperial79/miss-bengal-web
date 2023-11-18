@@ -2,7 +2,7 @@ import React from "react";
 
 const ImageGrid = ({ images, label, subLabel }) => {
   return (
-    <div className="grid grid-cols-4 gap-4">
+    <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
       {images.map((image, index) => (
         <div>
           <div className="h-[300px] bg-gray-800/80 border border-cyan-500 rounded-xl relative bg-opacity-50 backdrop-blur-sm">
