@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-const ImageCarousel = (props) => {
+const ImageCarousel = () => {
   const slides = [
     { url: "https://boec.com/wp-content/uploads/2020/01/Untitled-1.jpg" },
     {
@@ -95,12 +95,14 @@ const ImageCarousel = (props) => {
       </div>
 
       <div className="flex top-4 justify-center py-2 items-center gap-2 h-5">
-        {slides.map((slide, slideIndex) => (
-          <CarouselIndicator
-            onClick={() => setCurrentIndex(slideIndex)}
-            activeIndex={currentIndex}
-            index={slideIndex}
-          />
+        {slides.map((slide, index) => (
+          <div key={index}>
+            <CarouselIndicator
+              onClick={() => setCurrentIndex(index)}
+              activeIndex={currentIndex}
+              index={index}
+            />
+          </div>
         ))}
       </div>
     </div>
@@ -109,15 +111,17 @@ const ImageCarousel = (props) => {
 
 export default ImageCarousel;
 
-function CarouselIndicator(props) {
+function CarouselIndicator({ activeIndex, index, onClick }) {
   let clsName =
-    props.activeIndex === props.index
-      ? "h-3 w-3 bg-black cursor-pointer rounded-full"
-      : "cursor-pointer h-2 w-2 rounded-full bg-gray-500";
+    activeIndex === index
+      ? "h-3 w-3 bg-cyan-300 cursor-pointer rounded-full"
+      : "cursor-pointer h-2 w-2 rounded-full bg-gray-800/80";
   return (
     <div
-      onClick={props.onClick}
-      className={clsName + " -translate-x-3 translate-y-3 transition-all"}
+      onClick={onClick}
+      className={
+        clsName + " -translate-x-3 translate-y-3 transition-all duration-300"
+      }
     ></div>
   );
 }

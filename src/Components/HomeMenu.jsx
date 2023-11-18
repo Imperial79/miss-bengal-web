@@ -28,9 +28,9 @@ function MenuButton({ to, label }) {
   return (
     <Link
       to={to}
-      className="text-white text-center w-full bg-black rounded-lg px-5 py-3 mb-2 hover:bg-gray-700 transition-all"
+      className="text-white w-full bg-black rounded-lg px-5 py-3 mb-2 hover:bg-gray-700 transition-all overflow-hidden whitespace-nowrap text-center"
     >
-      {label}
+      <p className="overflow-clip text-ellipsis">{label}</p>
     </Link>
   );
 }

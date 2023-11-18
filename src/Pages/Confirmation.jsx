@@ -1,6 +1,7 @@
 import React from "react";
 import ContentArea from "../Components/ContentArea";
 import successIcon from "../assets/success.webp";
+import { Link } from "react-router-dom";
 
 function Confirmation() {
   return (
@@ -18,6 +19,12 @@ function Confirmation() {
           <h1 className="font-medium mt-1 text-lg text-gray-200">
             For further processes you'll be contacted via email by our team
           </h1>
+
+          <Link to="/">
+            <div className="mt-5 cursor-pointer text-cyan-300 font-medium hover:text-cyan-500 hover:underline">
+              Home
+            </div>
+          </Link>
         </div>
       </div>
     </ContentArea>
