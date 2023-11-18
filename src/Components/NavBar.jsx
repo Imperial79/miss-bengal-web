@@ -61,7 +61,7 @@ function NavBar() {
             </Link>
           </li>
           <li>
-            <Link to="" className="hover:underline">
+            <Link to="/contact-us" className="hover:underline">
               Contact Us
             </Link>
           </li>

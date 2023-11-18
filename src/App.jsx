@@ -10,6 +10,7 @@ import Confirmation from "./Pages/Confirmation";
 import AboutUs from "./Pages/AboutUs";
 import EventsPage from "./Pages/EventsPage";
 import Pageants from "./Pages/pageants";
+import ContactUs from "./Pages/ContactUs";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/pageants" element={<Pageants />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>

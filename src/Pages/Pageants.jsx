@@ -50,7 +50,7 @@ function Pageants() {
       </div>
       <ContentArea>
         <div className="md:w-[80%] w-full mx-auto">
-          <ImageGrid images={images} />
+          <ImageGrid images={images} label="Name" subLabel="Sub Label" />
         </div>
       </ContentArea>
     </>
