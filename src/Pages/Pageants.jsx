@@ -1,43 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../Components/NavBar";
 import ImageGrid from "../Components/ImageGrid";
 import ContentArea from "../Components/ContentArea";
+import { dbObject } from "../Helper/Constants";
 
 function Pageants() {
-  const images = [
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 1",
-    },
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 2",
-    },
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 2",
-    },
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 2",
-    },
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 2",
-    },
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 2",
-    },
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 2",
-    },
-    {
-      src: "https://img.freepik.com/free-photo/afro-young-adult-woman-exudes-confidence-generative-ai_188544-7654.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1700006400&semt=ais",
-      alt: "Image 2",
-    },
-  ];
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  async function fetchData() {
+    try {
+      setLoading(true);
+      const response = await dbObject.get("/pageants/fetch-pageants.php");
+
+      if (!response.data.error) {
+        setData(response.data.response);
+      }
+
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -48,9 +37,9 @@ function Pageants() {
           className="object-cover w-full h-full"
         />
       </div>
-      <ContentArea>
+      <ContentArea isLoading={loading}>
         <div className="md:w-[80%] w-full mx-auto">
-          <ImageGrid images={images} label="Name" subLabel="Sub Label" />
+          <ImageGrid data={data} />
         </div>
       </ContentArea>
     </>

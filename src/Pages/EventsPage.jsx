@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NavBar from "../Components/NavBar";
 import ContentArea from "../Components/ContentArea";
+import { dbObject } from "../Helper/Constants";
 
 function EventsPage() {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  async function fetchData() {
+    try {
+      setLoading(true);
+      const response = await dbObject.get(
+        "/events-blogs/fetch-events-blogs.php"
+      );
+
+      if (!response.data.error) {
+        setData(response.data.response);
+      }
+
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
       <NavBar />
@@ -13,10 +38,13 @@ function EventsPage() {
           className="object-cover w-full h-full"
         />
       </div>
-      <ContentArea>
+      <ContentArea isLoading={loading}>
         <div className="md:w-[80%] w-full mx-auto">
-          <LargeCard index={0} />
-          <LargeCard index={1} />
+          {data.map((data, index) => (
+            <div key={data.id}>
+              <LargeCard index={index} data={data} />
+            </div>
+          ))}
         </div>
       </ContentArea>
     </>
@@ -25,35 +53,19 @@ function EventsPage() {
 
 export default EventsPage;
 
-function LargeCard({ index }) {
+function LargeCard({ index, data }) {
   return (
-    <div className="md:grid md:grid-cols-2 gap-2 items-center mb-36 mx-auto">
+    <div className="md:grid md:grid-cols-2 gap-2 items-center md:mb-36 mb-20 mx-auto">
       <div className="h-[350px] md:w-auto w-[90%] mx-auto md:mb-0 mb-5 bg-gray-800/80 p-5">
-        <img
-          src="https://www.24x7review.com/wp-content/uploads/2019/06/Miss-West-Bengal-2019-Sushmita-Roy-2-819x1024.jpg"
-          alt=""
-          className="h-full w-full object-contain"
-        />
+        <img src={data.image} alt="" className="h-full w-full object-contain" />
       </div>
-      <p
-        className={`text-md font-medium text-gray-200 tracking-wider ${
-          index % 2 != 0 ? "md:order-first" : "md:order-last"
-        }`}
-      >
-        Lorem Ipsum, sometimes referred to as 'lipsum', is the placeholder text
-        used in design when creating content. It helps designers plan out where
-        the content will sit, without needing to wait for the content to be
-        written and approved. It originally comes from a Latin text, but to
-        today's reader, it's seen as gibberish.
-        <br /> Lorem Ipsum, sometimes referred to as 'lipsum', is the
-        placeholder text used in design when creating content. It helps
-        designers plan out where the content will sit, without needing to wait
-        for the content to be written and approved. It originally comes from a
-        Latin text, but to today's reader, it's seen as gibberish.
-        <br /> Lorem Ipsum, sometimes referred to as 'lipsum', is the
-        placeholder text used in design when creating content. It helps
-        designers plan out
-      </p>
+
+      <div className={`${index % 2 != 0 ? "md:order-first" : "md:order-last"}`}>
+        <h1 className="font-semibold text-xl text-white mb-2">{data.title}</h1>
+        <p className="text-md font-normal text-gray-200 tracking-wider">
+          {data.content}
+        </p>
+      </div>
     </div>
   );
 }
