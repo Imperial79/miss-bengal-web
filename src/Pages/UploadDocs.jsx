@@ -9,7 +9,6 @@ function UploadDocs() {
   };
 
   const handleDopdownSelect = (e) => {
-    console.log(e.target.textContent);
     document.getElementById("dropdownText").innerHTML = e.target.textContent;
     toggleDropdown();
   };

@@ -1,17 +1,6 @@
 import { useEffect, useState } from "react";
 
-const ImageCarousel = () => {
-  const slides = [
-    { url: "https://boec.com/wp-content/uploads/2020/01/Untitled-1.jpg" },
-    {
-      url: "https://www.nyit.edu/files/events/Event_20201018_VirtualTalentShow_Hero.jpg",
-    },
-    {
-      url: "https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2022/11/website-banner-1-1668605482.jpg",
-    },
-    { url: "https://i.ytimg.com/vi/sTmUOzH6hY4/maxresdefault.jpg" },
-  ];
-
+const ImageCarousel = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -45,7 +34,7 @@ const ImageCarousel = () => {
     <div>
       <div className="max-w-[1400px] md:h-[500px] h-[200px] w-full mt-[20px] relative group">
         <div
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+          style={{ backgroundImage: `url(${slides[currentIndex].image})` }}
           className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
         ></div>
 

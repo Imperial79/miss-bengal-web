@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/react.svg";
 import menu from "../assets/menu.svg";
 import HomeMenu from "./HomeMenu";
 import { Link } from "react-router-dom";
@@ -18,9 +17,8 @@ function NavBar() {
         setMenuOpen(!isMenuOpen);
       }
     };
-    // if (isMenuOpen) {
     document.addEventListener("mousedown", closeMenuOnOutsideClick);
-    // }
+
     return () => {
       document.removeEventListener("mousedown", closeMenuOnOutsideClick);
     };
@@ -39,32 +37,11 @@ function NavBar() {
           </Link>
         </div>
         <ul className="md:flex hidden gap-10 items-center">
-          <li>
-            <Link to="/" className="hover:underline">
-              Home
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/about-us" className="hover:underline">
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Link to="/events" className="hover:underline">
-              Events
-            </Link>
-          </li>
-          <li>
-            <Link to="/pageants" className="hover:underline">
-              Pageants
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact-us" className="hover:underline">
-              Contact Us
-            </Link>
-          </li>
+          <NavBtn to="/" label="Home" />
+          <NavBtn to="/about-us" label="About Us" />
+          <NavBtn to="/events" label="Events" />
+          <NavBtn to="/pageants" label="Pageants" />
+          <NavBtn to="/contact-us" label="Contact Us" />
         </ul>
 
         <div className="flex items-center">
@@ -91,3 +68,21 @@ function NavBar() {
 }
 
 export default NavBar;
+
+function NavBtn({ to, label }) {
+  return (
+    <li>
+      <Link
+        to={to}
+        className={`hover:underline active:bg-black px-3 py-2 rounded-xl ${
+          window.location.pathname.replace("/", "").replace("-", " ") ===
+          label.toLowerCase()
+            ? "bg-black"
+            : ""
+        }`}
+      >
+        {label}
+      </Link>
+    </li>
+  );
+}

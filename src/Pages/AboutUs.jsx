@@ -19,7 +19,6 @@ function AboutUs() {
     try {
       setLoading(true);
       const response = await dbObject.get("/about-us/fetch-about-content.php");
-      console.log(response);
 
       if (!response.data.error) {
         setData(response.data.response);
@@ -58,27 +57,9 @@ function AboutUs() {
           <p className="mt-4 text-lg font-medium text-gray-50">{data.wdu}</p>
 
           <div className="grid grid-cols-3 md:gap-10 gap-5 mt-20">
-            <div className="bg-black">
-              <img
-                src={data.image1}
-                alt=""
-                className="object-cover h-full w-full"
-              />
-            </div>
-            <div className="bg-black">
-              <img
-                src={data.image2}
-                alt=""
-                className="object-cover h-full w-full"
-              />
-            </div>
-            <div className="bg-black">
-              <img
-                src={data.image3}
-                alt=""
-                className="object-cover h-full w-full"
-              />
-            </div>
+            <AboutImageCard url={data.image1} />
+            <AboutImageCard url={data.image2} />
+            <AboutImageCard url={data.image3} />
           </div>
 
           <h1 className="mt-20 tracking-widest font-bold md:text-5xl text-2xl">
@@ -92,3 +73,11 @@ function AboutUs() {
 }
 
 export default AboutUs;
+
+function AboutImageCard({ url }) {
+  return (
+    <div className="bg-gray-800/80 p-3">
+      <img src={url} alt="" className="object-cover h-full w-full" />
+    </div>
+  );
+}

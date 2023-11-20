@@ -5,7 +5,7 @@ const ImageGrid = ({ data }) => {
     <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
       {data.map((data, index) => (
         <div key={data.id}>
-          <div className="h-[300px] bg-gray-800/80 border border-cyan-500 rounded-xl relative bg-opacity-50 backdrop-blur-sm">
+          <div className="h-[300px] bg-gray-800/80 p-3">
             <img
               key={index}
               src={data.image}
