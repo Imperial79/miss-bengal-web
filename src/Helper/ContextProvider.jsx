@@ -11,11 +11,29 @@ function ContextProvider(props) {
     content: "",
     isDanger: false,
   });
-  const [parameter, setParameter] = useState({
-    origin: "",
-    body: {},
+  // const [parameter, setParameter] = useState({
+  //   origin: "",
+  //   body: {},
+  // });
+
+  const [signupDetails, setsignupDetails] = useState({
+    fullname: "",
+    phone: "",
+    email: "",
+    password: "",
+    height: "",
+    qualification: "",
+    address: "",
+    aadhaarNumber: "",
+    ppaRemark: "",
+    recentSelfie: "",
+    kycDocument: "",
+    kycFrontImage: "",
+    kycBackImage: "",
+    fcmToken: "",
   });
-  const navigator = useNavigate();
+
+  // const navigator = useNavigate();
 
   // const auth = async () => {
   //   setAuthLoading(true);
@@ -47,10 +65,10 @@ function ContextProvider(props) {
         alert,
         setAlert,
         _id,
-        parameter,
-        setParameter,
-        auth,
-        authLoading,
+        // authLoading,
+        // auth,
+        signupDetails,
+        setsignupDetails,
       }}
     >
       {props.children}
